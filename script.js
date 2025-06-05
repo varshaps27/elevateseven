@@ -12,7 +12,7 @@ function loadUsers() {
     .then(users => {
       users.forEach(user => {
         const li = document.createElement('li');
-        li.textContent = `${user.id} (${user.username}) (${user.phone})`;
+        li.textContent = `${user.name} - (${user.email}) - ${user.address.street}, ${user.address.suite}, ${user.address.city}`;
         list.appendChild(li);
       });
     })
